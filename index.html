@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Paphitchaya Kimyong</title>
+<script>
+    function greeting()
+    {
+        
+        let name = prompt("please input your name")
+        window.alert('Hi '+name);
+        document.getElementById('demo').innerHTML = 'Hello! '+name ; 
+    }
+    function changecolor()
+    {
+        document.getElementById('demo').style.color="red";
+        document.getElementById('demo').style.fontSize="32px";
+    }
+    function changeimg1()
+    {
+        document.getElementById('pic').src="https://i.pinimg.com/originals/a3/42/ab/a342abca931d08e7baec12f50f3f75fe.png";
+    }
+    function changeimg2()
+    {
+        document.getElementById('pic').src="https://i.pinimg.com/originals/39/6b/7c/396b7c34a58d742ad87e2a9ecf0ab01a.png";
+    }
+</script>
 </head>
+
 <body>
 
-<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfRHjFZLKlxrpGqEUVUDoT_VnxfbQSbf5mw&usqp=CAU">
-<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfRHjFZLKlxrpGqEUVUDoT_VnxfbQSbf5mw&usqp=CAU">
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<h2>My First JavaScript</h2>
+
+<button type="button" onclick="greeting()">
+Click me!!!!</button>
+<br><br>
+<button type="button" onclick="changecolor()">
+Click me to change the color of text.</button>
+<br><br>
+<button type="button" onclick="changeimg1()">
+Click me to change pic #1.</button>
+
+<button type="button" onclick="changeimg2()">
+Click me to change pic #2.</button>
+<br>
+
+
+<img id ="pic" src="https://i.pinimg.com/originals/a3/42/ab/a342abca931d08e7baec12f50f3f75fe.png">
+<br>
+<p id="demo"></p>
+
+
+
+
 
 </body>
-</html>
+</html> 
