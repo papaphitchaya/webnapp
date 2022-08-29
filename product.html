@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6230300567</title>
+</head>
+
+<script>
+    var check = true;
+    const id01 = {id:01,name:'SANRIO ปากกา2C Pochacco รุ่น 582701PC0521',price:59,img:'https://backend.central.co.th/media/catalog/product/c/d/cds83822285-1.jpg?impolicy=resize&width=553'}
+    const id02 = {id:02,name:'SANRIO ปากกา2C Pompompurin รุ่น 582671PN0521',price:59,img:'https://backend.central.co.th/media/catalog/product/c/d/cds83822278-1.jpg?impolicy=resize&width=553'}
+    const id03 = {id:03,name:'ชุดผ้าปิดจมูก 2 ชิ้น สำหรับผู้ใหญ่ ลาย Little Twin Stars',price:129,img:'https://backend.central.co.th/media/catalog/product/c/d/cds79751841-1.jpg?impolicy=resize&width=553'}
+    const id04 = {id:04,name:'ชุดผ้าปิดจมูก 2 ชิ้น สำหรับผู้ใหญ่ ลาย Bad Badtz-Maru',price:129,img:'https://backend.central.co.th/media/catalog/product/c/d/cds79751827-1.jpg?impolicy=resize&width=553'}
+    const id05 = {id:05,name:'ชุดผ้าปิดจมูก 2 ชิ้น สำหรับผู้ใหญ่ ลาย My Melody',price:129,img:'https://backend.central.co.th/media/catalog/product/c/d/cds79751834-1.jpg?impolicy=resize&width=553'}
+    const id06 = {id:06,name:'กระเป๋าใส่เอกสารลาย Little Twin Stars',price:199,img:'https://backend.central.co.th/media/catalog/product/c/d/cds21565144-1.jpg?impolicy=resize&width=553'}
+    const id07 = {id:07,name:'กระเป๋าใส่เอกสารลาย Hello Kitty',price:199,img:'https://backend.central.co.th/media/catalog/product/c/d/cds21565113-1.jpg?impolicy=resize&width=553'}
+    const id08 = {id:08,name:'กระเป๋าใส่เอกสารลาย Minna No Tabo',price:199,img:'https://backend.central.co.th/media/catalog/product/c/d/cds21565137-1.jpg?impolicy=resize&width=553'}
+    const id09 = {id:09,name:'แก้วน้ำสุญญากาศ Bad Badtz-Maru',price:399,img:'https://backend.central.co.th/media/catalog/product/c/d/cds87795028-1.jpg?impolicy=resize&width=553'}
+    const id10 = {id:10,name:'แก้วน้ำสุญญากาศ Hello Kitty',price:399,img:'https://backend.central.co.th/media/catalog/product/c/d/cds87794991-1.jpg?impolicy=resize&width=553'}
+
+    const arr_menu = [id01,id02,id03,id04,id05,id06,id07,id08,id09,id10]
+    
+    
+    function showMenu(){
+        if(check){
+            const Div = document.createElement("div");
+            Div.setAttribute("id","mydiv");
+            document.body.appendChild(Div);
+            arr_menu.forEach(myFunction);
+            check = false;
+        }
+        else{
+            const element = document.getElementById('mydiv')
+            element.remove();
+            check = true;
+        }
+    }
+
+
+    function myFunction(value){
+        var img = document.createElement("img");
+        var p = document.createElement("p");
+        var hr = document.createElement("hr");
+        var s1 = document.createTextNode(" ///////////////////// No. : "+ value.id + " ///////////////////// Name : " + value.name + " ///////////////////// Price : " + value.price +" ///////////////////// ")
+        p.appendChild(s1)
+        img.src =  value.img
+        document.getElementById("mydiv").appendChild(p)
+        document.getElementById("mydiv").appendChild(img)
+        document.getElementById("mydiv").appendChild(hr)
+    }
+</script>
+
+<body>
+    <h2>Click the button below to show the product</h2>
+    <button onclick="showMenu()"> all product</button>
+</body>
